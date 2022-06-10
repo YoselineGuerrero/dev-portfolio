@@ -11,7 +11,7 @@ import Link from '@mui/material/Link';
 import psyduck_white_flag from './psyduck_white_flag.jpg'
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button, CardActions } from '@mui/material';
 import githubHomepage from './images/github-example.jpg';
 import MUIHomepage from './images/MUI_template.jpg';
 
