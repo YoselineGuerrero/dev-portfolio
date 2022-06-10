@@ -12,6 +12,8 @@ import psyduck_white_flag from './psyduck_white_flag.jpg'
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActionArea, CardActions } from '@mui/material';
+import githubHomepage from './images/github-example.jpg';
+import MUIHomepage from './images/MUI_template.jpg';
 
 const socials = [
   {id:'1', icon:GitHubIcon, title: 'Github', color: 'black', url: 'https://github.com/YoselineGuerrero' },
@@ -20,8 +22,8 @@ const socials = [
 ];
 
 const repos = [
-  {id:'1', name:'MUI Template', description: 'A template created using react and mui (material UI)', code_site: 'https://github.com/YoselineGuerrero/mui_template', live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/', img:'' },
-  {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:'' },
+  {id:'1', name:'MUI Template', description: 'A template created using react and mui (material UI)', code_site: 'https://github.com/YoselineGuerrero/mui_template', live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/', img:MUIHomepage},
+  {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:githubHomepage },
 ];
 
 
@@ -42,7 +44,7 @@ export default function MainPage() {
         </Grid>
       </Card>
 
-      <div style={{ marginTop:'-150px', marginRight:'50px', marginLeft:'50px'}}>
+      <div style={{ marginTop:'-150px', marginRight:'50px', marginLeft:'50px', marginBottom:'20px'}}>
         <img src={psyduck_white_flag} alt='psyduck with white flag'/>
         <Grid container spacing={2} justifyContent="center">
           <Grid item xs={11}>
@@ -89,8 +91,9 @@ export default function MainPage() {
           </Grid>
 
           {repos.map((repo) => (
-            <Grid item xs={5}>
+            <Grid item md={5} sx={12}>
               <Card elevation={3}>
+                <CardMedia component="img" image={repo.img} alt="green iguana"/>
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {repo.name}
