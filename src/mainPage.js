@@ -9,11 +9,19 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import psyduck_white_flag from './psyduck_white_flag.jpg'
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { Button, CardActionArea, CardActions } from '@mui/material';
 
 const socials = [
   {id:'1', icon:GitHubIcon, title: 'Github', color: 'black', url: 'https://github.com/YoselineGuerrero' },
   {id:'2', icon:LinkedInIcon, title: 'LinkedIn', color: 'blue',  url: 'https://www.linkedin.com/in/yoseline-guerrero-a78526175/' },
   {id:'3', icon:EmailIcon, title: 'Email', color: 'red', url: '#' },
+];
+
+const repos = [
+  {id:'1', name:'MUI Template', description: 'A template created using react and mui (material UI)', code_site: 'https://github.com/YoselineGuerrero/mui_template', live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/', img:'' },
+  {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:'' },
 ];
 
 
@@ -79,6 +87,30 @@ export default function MainPage() {
             <Link target="_blank" href="https://github.com/YoselineGuerrero?tab=repositories">GitHub</Link>
             </Typography>
           </Grid>
+
+          {repos.map((repo) => (
+            <Grid item xs={5}>
+              <Card elevation={3}>
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="div">
+                    {repo.name}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {repo.description}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small" color="primary" href={repo.code_site} target="_blank">
+                    Code
+                  </Button>
+                  <Button size="small" color="primary" href={repo.live_site} target="_blank">
+                    Live Site
+                  </Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+
           <Grid item xs={12}>
             <Typography variant="h6" align="center" display="block">
               Tech
