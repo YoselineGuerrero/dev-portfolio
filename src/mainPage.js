@@ -19,6 +19,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Paper from '@mui/material/Paper';
 
 const socials = [
   {id:'1', icon:GitHubIcon, title: 'Github', color: 'black', url: 'https://github.com/YoselineGuerrero' },
@@ -68,7 +69,7 @@ export default function MainPage() {
   return (
     <div>
       <Toolbar>
-        <Box sx={{ display: { xs: 'flex', md: 'none' } }} onClickAway={handleCloseNavMenu}>
+        <Box sx={{ display: { xs: 'flex', md: 'none' }}}>
           <IconButton aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
             <MenuIcon fontSize="small"/>
           </IconButton>
@@ -83,7 +84,7 @@ export default function MainPage() {
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           {sections.map((section) => (
-            <Button variant="text" sx={{ margin: 2 }} onClick={(e) => executeScroll(e, section.title)}>
+            <Button key={section.title} variant="text" sx={{ margin: 2 }} onClick={(e) => executeScroll(e, section.title)}>
               {section.title} 
             </Button>
           ))}
@@ -106,27 +107,23 @@ export default function MainPage() {
       <div style={{ marginTop:'-150px', marginRight:'50px', marginLeft:'50px', marginBottom:'20px'}}>
         <img src={psyduck_white_flag} alt='psyduck with white flag'/>
         <Grid container spacing={2} justifyContent="center">
-          <div ref={education}>
-          <Grid item xs={11}>
+          <Grid item xs={11} ref={education}>
             <Typography variant="h6" align="center" display="block">
               Education
             </Typography>
           </Grid>
-          <Grid item xs={11}>
+          <Grid item md={5} xs={11}>
             <Typography variant="overline" align="center" display="block" >
-              <Grid container justifyContent="center">
-                <Grid item md={6} xs={11}>
-                  Lone Star College (2018-2020)<br></br>
-                  associates degree in computer science 
-                </Grid>
-                <Grid item md={6} xs={11}>
-                  University of Houston (2020-2022)<br></br>
-                  bachelor degree in computer science
-                </Grid>
-              </Grid>
+              Lone Star College (2018-2020)<br></br>
+              associates degree in computer science
             </Typography>
           </Grid>
-          </div>
+          <Grid item md={5} xs={11}>
+            <Typography variant="overline" align="center" display="block" >
+              University of Houston (2020-2022)<br></br>
+              bachelor degree in computer science
+            </Typography>
+          </Grid>
           <Grid item xs={11} ref={competitions}>
             <Typography variant="h6" align="center" display="block" >
               Competitions
@@ -152,7 +149,7 @@ export default function MainPage() {
           </Grid>
 
           {repos.map((repo) => (
-            <Grid item md={5} sx={12}>
+            <Grid item md={5} xs={12} key={repo.id}>
               <Card elevation={3}>
                 <CardMedia component="img" image={repo.img} alt="green iguana"/>
                 <CardContent>
@@ -210,6 +207,22 @@ export default function MainPage() {
           </Grid>
         </Grid>
       </div>
+      <Paper square elevation={3}>
+				<Grid container justifyContent="center">
+					{socials.map((socials) => (
+				    <Grid item key={socials.title}>
+					    <Tooltip title={socials.title} >
+							  <IconButton  sx={{ "&:hover": { color: socials.color } }} target="_blank" href={socials.url} >
+									<socials.icon  />
+							  </IconButton>
+						  </Tooltip>
+					  </Grid>
+					))}
+				</Grid>
+				<Typography variant="body2" color="text.secondary" sx={{paddingBottom:'10px'}} align="center">
+					{'Copyright © Yoseline Guerrero 2022'}
+				</Typography>
+			</Paper>
     </div>
   );
 }
