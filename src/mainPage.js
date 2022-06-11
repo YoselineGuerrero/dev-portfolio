@@ -1,9 +1,5 @@
 import React, {useState, useRef} from 'react';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import EmailIcon from '@mui/icons-material/Email';
 import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
@@ -12,32 +8,15 @@ import psyduck_white_flag from './psyduck_white_flag.jpg'
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActions } from '@mui/material';
-import githubHomepage from './images/github-example.jpg';
-import MUIHomepage from './images/MUI_template.jpg';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import Paper from '@mui/material/Paper';
-
-const socials = [
-  {id:'1', icon:GitHubIcon, title: 'Github', color: 'black', url: 'https://github.com/YoselineGuerrero' },
-  {id:'2', icon:LinkedInIcon, title: 'LinkedIn', color: 'blue',  url: 'https://www.linkedin.com/in/yoseline-guerrero-a78526175/' },
-  {id:'3', icon:EmailIcon, title: 'Email', color: 'red', url: '#' },
-];
-
-const repos = [
-  {id:'1', name:'MUI Template', description: 'A template created using react and mui (material UI)', code_site: 'https://github.com/YoselineGuerrero/mui_template', live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/', img:MUIHomepage},
-  {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:githubHomepage },
-];
-
-const sections = [
-  { title: 'Education' },
-  { title: 'Competitions' },
-  { title: 'Projects' },
-  { title: 'Tech' },
-];
+import Footer from './components/footer';
+import SocialCard from './components/socialsCard';
+import {repos} from './data';
+import {sections} from './data';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
@@ -90,20 +69,7 @@ export default function MainPage() {
           ))}
         </Box>
       </Toolbar>
-      <Card elevation={3} sx={{ display: 'inline-block', position: "sticky", top: '40vh', left:'100vw'}} >
-        <Grid rowSpacing={1} >
-          {socials.map((socials) => (
-            <Grid key={socials.id}>
-              <Tooltip title={socials.title}>
-                <IconButton sx={{ "&:hover": { color: socials.color } }} target="_blank" href={socials.url} >
-                  <socials.icon fontSize="large" />
-                </IconButton>
-              </Tooltip>
-            </Grid>
-          ))}
-        </Grid>
-      </Card>
-
+      <SocialCard/>
       <div style={{ marginTop:'-150px', marginRight:'50px', marginLeft:'50px', marginBottom:'20px'}}>
         <img src={psyduck_white_flag} alt='psyduck with white flag'/>
         <Grid container spacing={2} justifyContent="center">
@@ -207,22 +173,7 @@ export default function MainPage() {
           </Grid>
         </Grid>
       </div>
-      <Paper square elevation={3}>
-				<Grid container justifyContent="center">
-					{socials.map((socials) => (
-				    <Grid item key={socials.title}>
-					    <Tooltip title={socials.title} >
-							  <IconButton  sx={{ "&:hover": { color: socials.color } }} target="_blank" href={socials.url} >
-									<socials.icon  />
-							  </IconButton>
-						  </Tooltip>
-					  </Grid>
-					))}
-				</Grid>
-				<Typography variant="body2" color="text.secondary" sx={{paddingBottom:'10px'}} align="center">
-					{'Copyright © Yoseline Guerrero 2022'}
-				</Typography>
-			</Paper>
+      <Footer/>
     </div>
   );
 }
