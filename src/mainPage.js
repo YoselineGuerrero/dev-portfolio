@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
@@ -14,6 +14,11 @@ import CardMedia from '@mui/material/CardMedia';
 import { Button, CardActions } from '@mui/material';
 import githubHomepage from './images/github-example.jpg';
 import MUIHomepage from './images/MUI_template.jpg';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const socials = [
   {id:'1', icon:GitHubIcon, title: 'Github', color: 'black', url: 'https://github.com/YoselineGuerrero' },
@@ -26,10 +31,64 @@ const repos = [
   {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:githubHomepage },
 ];
 
+const sections = [
+  { title: 'Education' },
+  { title: 'Competitions' },
+  { title: 'Projects' },
+  { title: 'Tech' },
+];
 
 export default function MainPage() {
+  const [navMenu, setnavMenu] = useState(null);
+  const education = useRef(null);
+  const competitions = useRef(null);
+  const projects = useRef(null);
+  const tech = useRef(null);
+
+  const handleOpenNavMenu = (event) => {
+    setnavMenu(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setnavMenu(null);
+  };
+
+  const executeScroll = (e, title) => {
+    e.preventDefault();
+    if(title === 'Education')
+    education.current.scrollIntoView({  behavior: 'smooth' })
+    else if(title === 'Competitions')
+    competitions.current.scrollIntoView({  behavior: 'smooth' })
+    else if(title === 'Projects')
+    projects.current.scrollIntoView({   behavior: 'smooth' })
+    else if(title === 'Tech')
+    tech.current.scrollIntoView({ behavior: 'smooth' })
+  };
+
   return (
     <div>
+      <Toolbar>
+        <Box sx={{ display: { xs: 'flex', md: 'none' } }} onClickAway={handleCloseNavMenu}>
+          <IconButton aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
+            <MenuIcon fontSize="small"/>
+          </IconButton>
+          <Menu anchorEl={navMenu} open={Boolean(navMenu)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' } }}>
+            {sections.map((section) => (
+              <MenuItem key={section.title} onClick={(e) => executeScroll(e, section.title)}>
+                <Button textAlign="center" >{section.title}</Button>
+              </MenuItem>
+            ))}
+          </Menu>
+        </Box>
+        <Box sx={{ flexGrow: 1 }} />
+        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+          {sections.map((section) => (
+            <Button variant="text" sx={{ margin: 2 }} onClick={(e) => executeScroll(e, section.title)}>
+              {section.title} 
+            </Button>
+          ))}
+        </Box>
+      </Toolbar>
       <Card elevation={3} sx={{ display: 'inline-block', position: "sticky", top: '40vh', left:'100vw'}} >
         <Grid rowSpacing={1} >
           {socials.map((socials) => (
@@ -47,6 +106,7 @@ export default function MainPage() {
       <div style={{ marginTop:'-150px', marginRight:'50px', marginLeft:'50px', marginBottom:'20px'}}>
         <img src={psyduck_white_flag} alt='psyduck with white flag'/>
         <Grid container spacing={2} justifyContent="center">
+          <div ref={education}>
           <Grid item xs={11}>
             <Typography variant="h6" align="center" display="block">
               Education
@@ -66,7 +126,8 @@ export default function MainPage() {
               </Grid>
             </Typography>
           </Grid>
-          <Grid item xs={11}>
+          </div>
+          <Grid item xs={11} ref={competitions}>
             <Typography variant="h6" align="center" display="block" >
               Competitions
             </Typography>
@@ -78,7 +139,7 @@ export default function MainPage() {
               <Link target="_blank" href="https://devpost.com/YoselineGuerrero?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Devpost, click me!</Link>
             </Typography>
           </Grid>
-          <Grid item xs={11}>
+          <Grid item xs={11} ref={projects}>
             <Typography variant="h6" align="center" display="block" >
               Currect released projects
             </Typography>
@@ -114,7 +175,7 @@ export default function MainPage() {
             </Grid>
           ))}
 
-          <Grid item xs={12}>
+          <Grid item xs={12} ref={tech}>
             <Typography variant="h6" align="center" display="block">
               Tech
             </Typography>
