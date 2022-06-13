@@ -47,23 +47,22 @@ export default function MainPage() {
 
   return (
     <div>
-      <Toolbar>
-        <Box sx={{ display: { xs: 'flex', md: 'none' }}}>
+      <Toolbar sx={{ position: "sticky", top: '0vh'}} >
+        <Box sx={{flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'flex', md: 'none' }}}>
           <IconButton aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
             <MenuIcon fontSize="small"/>
           </IconButton>
           <Menu anchorEl={navMenu} open={Boolean(navMenu)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' } }}>
             {sections.map((section) => (
               <MenuItem key={section.title} onClick={(e) => executeScroll(e, section.title)}>
-                <Button textAlign="center" >{section.title}</Button>
+                <Button>{section.title}</Button>
               </MenuItem>
             ))}
           </Menu>
         </Box>
-        <Box sx={{ flexGrow: 1 }} />
-        <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+        <Box sx={{flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'none', md: 'flex' } }}>
           {sections.map((section) => (
-            <Button key={section.title} variant="text" sx={{ margin: 2 }} onClick={(e) => executeScroll(e, section.title)}>
+            <Button key={section.title} variant="text" onClick={(e) => executeScroll(e, section.title)}>
               {section.title} 
             </Button>
           ))}
