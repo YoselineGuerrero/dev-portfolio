@@ -5,9 +5,7 @@ import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import psyduck_white_flag from './psyduck_white_flag.jpg'
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import { Button, CardActions } from '@mui/material';
+import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Menu from '@mui/material/Menu';
@@ -15,7 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Footer from './components/footer';
 import SocialCard from './components/socialsCard';
-import {repos} from './data';
+import RepoCards from './components/repoCards';
 import {sections} from './data';
 
 export default function MainPage() {
@@ -112,31 +110,7 @@ export default function MainPage() {
             <Link target="_blank" href="https://github.com/YoselineGuerrero?tab=repositories">GitHub</Link>
             </Typography>
           </Grid>
-
-          {repos.map((repo) => (
-            <Grid item md={5} xs={12} key={repo.id}>
-              <Card elevation={3}>
-                <CardMedia component="img" image={repo.img} alt="green iguana"/>
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {repo.name}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {repo.description}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary" href={repo.code_site} target="_blank">
-                    Code
-                  </Button>
-                  <Button size="small" color="primary" href={repo.live_site} target="_blank">
-                    Live Site
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-
+          <RepoCards/>
           <Grid item xs={12} ref={tech}>
             <Typography variant="h6" align="center" display="block">
               Tech
