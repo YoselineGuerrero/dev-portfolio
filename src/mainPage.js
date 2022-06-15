@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useContext} from 'react';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -18,6 +18,10 @@ import RepoCards from './components/repoCards';
 import {sections} from './data';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import { ColorModeContext } from './App.js';
+import { useTheme } from '@mui/material/styles';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
@@ -25,6 +29,8 @@ export default function MainPage() {
   const competitions = useRef(null);
   const projects = useRef(null);
   const tech = useRef(null);
+  const theme = useTheme();
+  const colorMode = useContext(ColorModeContext);
 
   const handleOpenNavMenu = (event) => {
     setnavMenu(event.currentTarget);
@@ -70,9 +76,16 @@ export default function MainPage() {
               </Button>
             ))}
           </Box>
+          <Box sx={{ flexShrink: 0 , display:'flex'}}>
+            <IconButton onClick={colorMode.toggleColorMode}>
+              {theme.palette.mode === 'dark' ? <LightModeIcon fontSize="small"/> : <DarkModeIcon  fontSize="small"/>}
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
       <div style={{ marginBottom:'20px'}}>
+        <Typography variant="h3"> Hello World! </Typography>
+        <Typography variant="h3" sx={{marginLeft:'100px'}}>I'm Yoseline Guererro </Typography>
         <img style={{display: 'flex', marginLeft:'auto', marginRight:'auto' }} src={psyduck_white_flag} alt='psyduck with white flag'/>
         <Grid container justifyContent="center" align="center">
           <Grid item xs={11} ref={education} sx={{paddingTop: '70px'}}>
