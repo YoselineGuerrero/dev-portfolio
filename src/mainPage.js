@@ -3,7 +3,6 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import psyduck_white_flag from './images/psyduck_white_flag.jpg'
 import YG_dark from './images/YG_dark.png'
 import YG_light from './images/YG_light.png'
@@ -18,6 +17,7 @@ import Footer from './components/footer';
 import RepoCards from './components/repoCards';
 import {sections} from './data';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
@@ -73,7 +73,7 @@ export default function MainPage() {
         </Toolbar>
       </AppBar>
       <div style={{ marginBottom:'20px'}}>
-        <img src={psyduck_white_flag} alt='psyduck with white flag'/>
+        <img style={{display: 'flex', marginLeft:'auto', marginRight:'auto' }} src={psyduck_white_flag} alt='psyduck with white flag'/>
         <Grid container justifyContent="center" align="center">
           <Grid item xs={11} ref={education} sx={{paddingTop: '70px'}}>
             <Typography variant="h6" display="block">
@@ -100,9 +100,9 @@ export default function MainPage() {
           <Grid item xs={11}>
             <Typography variant="overline" display="block" >
               I have done competititon back in high school and during my last year of university. Here's a preview of some
-              of the competitions I have been in. {' '}
-              <Link target="_blank" href="https://devpost.com/YoselineGuerrero?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Devpost, click me!</Link>
+              of the competitions I have been in.
             </Typography>
+            <Button sx={{ marginBottom: '10px'}} target='_blank'  color='dark' variant="outlined" startIcon={<RocketLaunchIcon/>} href="https://devpost.com/YoselineGuerrero?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav">Devpost</Button>
           </Grid>
           <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
             <Typography variant="h6" display="block" >
@@ -113,7 +113,7 @@ export default function MainPage() {
             <Typography variant="overline" display="block" >
               Here's all the public solo project that I have done
             </Typography>
-            <Button sx={{ marginBottom: '10px'}}  color='dark' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero?tab=repositories"> GitHub</Button>
+            <Button target='_blank' color='dark' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero?tab=repositories"> GitHub</Button>
           </Grid>
           <RepoCards/>
           <Grid item xs={12} ref={tech} sx={{paddingTop: '70px'}}>
