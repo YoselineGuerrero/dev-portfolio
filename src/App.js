@@ -12,11 +12,9 @@ function App() {
   return (
     <div>
       <CssBaseline />
-      <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
         </Routes>
-      </BrowserRouter>
     </div>
   );
 }
