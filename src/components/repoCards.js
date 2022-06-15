@@ -11,22 +11,22 @@ export default function RepoCards() {
   return(
     <>
       {repos.map((repo) => (
-        <Grid item md={5} xs={12} key={repo.id}>
+        <Grid item md={5} xs={12} key={repo.id} sx={{ padding: '10px'}} >
           <Card elevation={3}>
             <CardMedia component="img" image={repo.img} alt="green iguana"/>
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
+              <Typography gutterBottom variant="h6">
                 {repo.name}
               </Typography>
-              <Typography variant="body2" color="text.secondary">
+              <Typography variant="body1" color="text.secondary">
                 {repo.description}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small" color="primary" href={repo.code_site} target="_blank">
+              <Button size="small" color="secondary" variant="outlined" href={repo.code_site} target="_blank">
                 Code
               </Button>
-              <Button size="small" color="primary" href={repo.live_site} target="_blank">
+              <Button size="small" color="secondary" variant="outlined" href={repo.live_site} target="_blank">
                 Live Site
               </Button>
             </CardActions>

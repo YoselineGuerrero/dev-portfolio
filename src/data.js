@@ -17,9 +17,14 @@ const repos = [
   
   const sections = [
     { title: 'Education' },
-    { title: 'Competitions' },
     { title: 'Projects' },
     { title: 'Tech' },
   ];
 
-  export {socials, repos, sections };
+  const techs = [
+    { title: 'frontend', items:['Html, javascript, css', 'React (MUI/material UI, Sematic'] },
+    { title: 'Full-stack/ Backend', items:['Django', 'Node'] },
+    { title: 'Database', items:['Mysql', 'MongoDB'] },
+  ];
+
+  export { socials, repos, sections, techs };

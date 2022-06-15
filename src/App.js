@@ -2,22 +2,21 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {lightTheme, darkTheme} from './theme';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Paper from '@mui/material/Paper';
 import MainPage from './mainPage';
 import React, { useEffect, createContext, useState, useMemo } from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
 
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function App() {
   return (
-    <div >
-    <Paper square>
+    <div>
+      <CssBaseline />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
         </Routes>
       </BrowserRouter>
-      </Paper>
     </div>
   );
 }
