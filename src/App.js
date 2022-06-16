@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import {lightTheme, darkTheme} from './theme';
 import useMediaQuery from '@mui/material/useMediaQuery';

@@ -11,7 +11,7 @@ export default function RepoCards() {
   return(
     <>
       {repos.map((repo) => (
-        <Grid item md={5} xs={12} key={repo.id} sx={{ padding: '10px'}} >
+        <Grid item md={5} xs={11} key={repo.id} sx={{ padding: '10px'}} >
           <Card elevation={3}>
             <CardMedia component="img" image={repo.img} alt="green iguana"/>
             <CardContent>

@@ -101,19 +101,22 @@ export default function MainPage() {
           </Grid>
           <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
             <Typography variant="h5" gutterBottom >
-              Currect released projects
+              Current released projects
             </Typography>
           </Grid>
           <Grid item xs={11}>
             <Typography variant="h6">
-              I have done competititon back in high school and during my last year of university. Clicking the devpost 
-              button will redirect you to the competition website.
+              Here's all the public project that I have done.
             </Typography>
             <Typography variant="h6">
-              Here's all the public solo project that I have done.
+              Devpost will redirect you to see the competitions I have been in.
             </Typography>
-            <Button target='_blank' color='secondary' variant="outlined" startIcon={<RocketLaunchIcon/>} href="https://devpost.com/YoselineGuerrero">Devpost</Button>
-            <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero?tab=repositories"> GitHub</Button>
+          </Grid>
+          <Grid item xs={12} >
+            <Box display="flex" justifyContent="space-evenly">
+              <Button target='_blank' color='secondary' variant="outlined" startIcon={<RocketLaunchIcon/>} href="https://devpost.com/YoselineGuerrero">Devpost</Button>
+              <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero">GitHub</Button>
+            </Box>
           </Grid>
           <RepoCards/>
           <Grid item xs={12} ref={tech} sx={{paddingTop: '70px'}}>
