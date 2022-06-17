@@ -20,12 +20,14 @@ import { ColorModeContext } from './App.js';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TechCards from './components/techCards';
+import ContactForm from './components/contactForm';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
   const education = useRef(null);
   const projects = useRef(null);
   const tech = useRef(null);
+  const contact = useRef(null);
   const colorMode = useContext(ColorModeContext);
 
   const handleOpenNavMenu = (event) => {
@@ -44,6 +46,8 @@ export default function MainPage() {
     projects.current.scrollIntoView({   behavior: 'smooth' })
     else if(title === 'Tech')
     tech.current.scrollIntoView({ behavior: 'smooth' })
+    else if(title === 'Contact')
+    contact.current.scrollIntoView({ behavior: 'smooth' })
   };
 
   return (
@@ -125,6 +129,15 @@ export default function MainPage() {
             </Typography>
           </Grid>
           <TechCards/>
+          <Grid item xs={12} ref={contact}>
+            <Typography variant="h5" gutterBottom align='center' sx={{paddingTop: '70px'}}>
+              Let's stay in touch!
+            </Typography>
+            <Typography  variant="outline" gutterBottom align='center'>
+              Currently working on it so come back soon!
+            </Typography>
+          </Grid>
+          <ContactForm/>
         </Grid>
       </div>
       <Footer/>
