@@ -5,7 +5,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
 import {repos} from '../data';
 import { Button, CardActions } from '@mui/material';
 
