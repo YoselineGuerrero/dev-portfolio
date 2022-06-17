@@ -11,8 +11,8 @@ const socials = [
   ];
 
 const repos = [
-    {id:'1', name:'MUI Template', description: 'A template created using react and mui (material UI)', code_site: 'https://github.com/YoselineGuerrero/mui_template', live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/', img:MUIHomepage},
-    {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:githubHomepage },
+    {id:'1', name:'MUI Template', description: 'A template created using react and mui (material UI)', code_site: 'https://github.com/YoselineGuerrero/mui_template', live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/', img:MUIHomepage, tech: ['React','MUI', 'AWS']},
+    {id:'2', name:'GitHub API search', description: 'Search for any user and get information on who they are.', code_site: 'https://github.com/YoselineGuerrero/react-api-pratice', live_site: 'https://yoselineguerrero.github.io/react-api-pratice/', img:githubHomepage,  tech: ['React','CSS', 'GitHub Pages'] },
   ];
   
   const sections = [
