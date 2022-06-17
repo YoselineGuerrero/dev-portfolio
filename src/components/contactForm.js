@@ -8,16 +8,16 @@ export default function ContactForm() {
   return(
     <Box component="form" sx={{ width: '95%' }}>
       <Grid item xs={12}  md={6}>
-        <TextField fullWidth helperText="Please enter your name" label="Name" disabled />
+        <TextField fullWidth helperText="Please enter your name" label="Name" disabled focused color="secondary"/>
       </Grid>
       <Grid item xs={12} md={6}>
-        <TextField fullWidth helperText="Please enter your email" label="Email" disabled />
+        <TextField fullWidth helperText="Please enter your email" focused  color="secondary" label="Email" disabled />
       </Grid>
       <Grid item xs={11} md={6}>
-        <TextField fullWidth label="Form" multiline rows={8} variant="filled" disabled />
+        <TextField fullWidth label="Form" multiline rows={8} color="secondary" focused disabled />
       </Grid>
       <Grid item xs={12} >
-        <Button type="submit" variant="contained" disabled sx={{ marginTop:'15px'}} >
+        <Button type="submit" variant="contained"  color="secondary" disabled sx={{ marginTop:'15px'}} >
           Submit
         </Button>
       </Grid>
