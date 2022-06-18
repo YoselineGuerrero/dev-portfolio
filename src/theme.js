@@ -37,9 +37,7 @@ const darkTheme = createTheme({
             color: '#747474',
           },
           '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-              backgroundColor: "#01080E",
-            },
+            backgroundColor: "#01080E",
             '&.Mui-disabled fieldset': {
               borderColor: '#272838',
             },
@@ -87,9 +85,6 @@ const lightTheme = createTheme({
     MuiTextField: {
       styleOverrides: {
         root: {
-          Input: {
-            color: "#000",
-          },
           "&.MuiTextField-root": {
             margin:'5px'
           },
@@ -97,9 +92,7 @@ const lightTheme = createTheme({
             color: '#676c94',
           },
           '& .MuiOutlinedInput-root': {
-            '& fieldset': {
-              backgroundColor: "#e6ecf7",
-            },
+             backgroundColor: "#e6ecf7",
             '&.Mui-disabled fieldset': {
               borderColor: '#b8b9ce',
             },
