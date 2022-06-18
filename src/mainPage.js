@@ -2,8 +2,7 @@ import React, {useState, useRef, useContext} from 'react';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import YG_dark from './images/YG_dark.png'
-import YG_light from './images/YG_light.png'
+import YG_logo from './images/YG_logo.png';
 import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -54,7 +53,7 @@ export default function MainPage() {
     <div>
       <AppBar position="sticky">
         <Toolbar>
-          {localStorage.getItem("mode") === 'dark' ? <img src={YG_light} alt='YG logo' height='50px'/>: <img src={YG_dark} alt='YG logo' height='50px'/>}
+          <img src={YG_logo} alt='YG logo' height='50px'/>
           <Box sx={{flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'flex', md: 'none' }}}>
             <IconButton aria-haspopup="true" onClick={handleOpenNavMenu} color="inherit">
               <MenuIcon fontSize="small"/>
