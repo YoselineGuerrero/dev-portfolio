@@ -17,7 +17,7 @@ export default function ContactForm() {
         <TextField fullWidth label="Form" multiline rows={8} color="secondary" focused disabled />
       </Grid>
       <Grid item xs={12} >
-        <Button type="submit" variant="contained"  color="secondary" disabled sx={{ marginTop:'15px'}} >
+        <Button type="submit" variant="outlined" disabled sx={{ marginTop:'15px'}} >
           Submit
         </Button>
       </Grid>
