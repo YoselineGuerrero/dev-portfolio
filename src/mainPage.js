@@ -19,7 +19,6 @@ import { ColorModeContext } from './App.js';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TechCards from './components/techCards';
-import ContactForm from './components/contactForm';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
@@ -136,7 +135,6 @@ export default function MainPage() {
               Currently working on it so come back soon!
             </Typography>
           </Grid>
-          <ContactForm/>
         </Grid>
       </div>
       <Footer/>

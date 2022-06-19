@@ -30,7 +30,7 @@ const repos = [
   {
     id: '1',
     name: 'MUI Template',
-    description: 'A template created using react and mui (material UI)',
+    description: 'A template created using react and MUI. Open for the whole public to copy and have a frontend already created for them to use.',
     code_site: 'https://github.com/YoselineGuerrero/mui_template',
     live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/',
     img: MUIHomepage,
@@ -38,7 +38,7 @@ const repos = [
   }, {
     id: '2',
     name: 'GitHub API search',
-    description: 'Search for any user and get information on who they are.',
+    description: 'Search for any user and get information on who they are and their projects.',
     code_site: 'https://github.com/YoselineGuerrero/react-api-pratice',
     live_site: 'https://yoselineguerrero.github.io/react-api-pratice/',
     img: githubHomepage,
@@ -61,7 +61,7 @@ const sections = [
 const techs = [
   {
     title: 'Frontend',
-    items:['Html, javascript, css', 'React (MUI/material UI, Semantic)']
+    items:['Html, JavaScript, CSS', 'React (MUI, Semantic)']
   }, {
     title: 'Full-stack/ Backend',
     items:['Django', 'Node']
