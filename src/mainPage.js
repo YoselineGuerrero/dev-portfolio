@@ -87,7 +87,8 @@ export default function MainPage() {
           <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center"}}>I'm Yoseline Guererro </Typography>
           <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer, taking over the world one page at a time...</Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center'}}>
-            <Button variant="contained" sx={{backgroundColor: 'yellow', borderRadius: 8, marginTop:'10px'}} onClick={(e) => executeScroll(e, 'Education')}>Start</Button>
+            <Button variant="contained" sx={{backgroundColor: 'yellow', color:'black', borderRadius: 8, marginTop:'10px', '&:hover': {backgroundColor: 'red',color: 'white',}}} onClick={(e) => executeScroll(e, 'Education')}>
+              Start</Button>
           </Box>
         </Box>
         <Grid container justifyContent="center" align="center">
