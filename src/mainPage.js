@@ -110,7 +110,7 @@ export default function MainPage() {
           </Grid>
           <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
             <Typography variant="h5" gutterBottom >
-              Current released projects
+              Released Projects
             </Typography>
           </Grid>
           <Grid item xs={11}>
