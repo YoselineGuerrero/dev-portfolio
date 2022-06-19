@@ -33,14 +33,8 @@ const darkTheme = createTheme({
           "&.MuiTextField-root": {
             margin:'5px'
           },
-          '& label.Mui-disabled': {
-            color: '#747474',
-          },
           '& .MuiOutlinedInput-root': {
             backgroundColor: "#01080E",
-            '&.Mui-disabled fieldset': {
-              borderColor: '#272838',
-            },
           },
           "& .MuiFormHelperText-root" :{
             color: '#747474 !important',
@@ -51,11 +45,6 @@ const darkTheme = createTheme({
     MuiButton:{
       styleOverrides:{
         root:{
-          '&.Mui-disabled': {
-            color: '#747474',
-            backgroundColor: '#01080E',
-            borderColor: '#272838'
-          }
         }
       }
     },
@@ -63,9 +52,9 @@ const darkTheme = createTheme({
       styleOverrides:{
         root:{
           '&.MuiChip-root':{
-            backgroundColor: '#cbe8b3',
-            borderColor: '#406920',
-            color: '#253c12'
+            backgroundColor: '#eadeee',
+            borderColor: '#410058',
+            color: '#410058'
           }
         }
       }
@@ -86,7 +75,7 @@ const lightTheme = createTheme({
     },
     background: {
       default: "#FAF9F6",
-      paper: '#E0EDF5',
+      paper: '#cde2ef',
     },
   },
   typography: {
@@ -99,17 +88,8 @@ const lightTheme = createTheme({
           "&.MuiTextField-root": {
             margin:'5px'
           },
-          '& label.Mui-disabled': {
-            color: '#676c94',
-          },
           '& .MuiOutlinedInput-root': {
              backgroundColor: "#e6ecf7",
-            '&.Mui-disabled fieldset': {
-              borderColor: '#b8b9ce',
-            },
-          },
-          "& .MuiInputBase-root.Mui-disabled" :{
-            color: '#676c94 !important',
           },
         },
       }
@@ -117,10 +97,12 @@ const lightTheme = createTheme({
     MuiButton:{
       styleOverrides:{
         root:{
-          '&.Mui-disabled': {
-             color: '#676c94',
-             backgroundColor: '#e6ecf7',
-             borderColor: '#b8b9ce'
+          '&.MuiButton-outlined': {
+            '&:hover': {
+              color: '#1a3c56',
+              backgroundColor: '#d0d9ec',
+              borderColor: '#235174'
+            },
           }
         }
       }
@@ -129,9 +111,9 @@ const lightTheme = createTheme({
       styleOverrides:{
         root:{
           '&.MuiChip-root':{
-            backgroundColor: '#cbe8b3',
-            borderColor: '#406920',
-            color: '#253c12'
+            backgroundColor: '#eadeee',
+            borderColor: '#410058',
+            color: '#410058'
           }
         }
       }
