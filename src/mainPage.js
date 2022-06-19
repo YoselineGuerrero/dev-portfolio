@@ -3,6 +3,7 @@ import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import YG_logo from './images/YG_logo.png';
+import trees from './images/trees.png';
 import { Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -81,9 +82,14 @@ export default function MainPage() {
         </Toolbar>
       </AppBar>
       <div style={{ marginBottom:'20px'}}>
-        <Typography variant="h3"  sx={{margin:'50px'}}> Hello World! </Typography>
-        <Typography variant="h3" sx={{marginLeft:'100px'}}>I'm Yoseline Guererro </Typography>
-        
+        <Box style={{ backgroundImage: `url(${trees})`, backgroundRepeat:'repeat-x', backgroundPosition:'bottom' ,height: '99vh'}}>
+          <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center", paddingTop:'50px'}} > Hello World! </Typography>
+          <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center"}}>I'm Yoseline Guererro </Typography>
+          <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer, taking over the world one page at a time...</Typography>
+          <Box sx={{ display: 'flex', justifyContent: 'center'}}>
+            <Button variant="contained" sx={{backgroundColor: 'yellow', borderRadius: 8, marginTop:'10px'}} onClick={(e) => executeScroll(e, 'Education')}>Start</Button>
+          </Box>
+        </Box>
         <Grid container justifyContent="center" align="center">
           <Grid item xs={11} ref={education} sx={{paddingTop: '70px'}}>
             <Typography variant="h5" gutterBottom>
