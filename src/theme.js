@@ -58,6 +58,17 @@ const darkTheme = createTheme({
           }
         }
       }
+    },
+    MuiChip:{
+      styleOverrides:{
+        root:{
+          '&.MuiChip-root':{
+            backgroundColor: '#cbe8b3',
+            borderColor: '#406920',
+            color: '#253c12'
+          }
+        }
+      }
     }
   }
 })
@@ -74,7 +85,7 @@ const lightTheme = createTheme({
       primary: '#272838',
     },
     background: {
-      default: "#FFF",
+      default: "#FAF9F6",
       paper: '#E0EDF5',
     },
   },
@@ -110,6 +121,17 @@ const lightTheme = createTheme({
              color: '#676c94',
              backgroundColor: '#e6ecf7',
              borderColor: '#b8b9ce'
+          }
+        }
+      }
+    },
+    MuiChip:{
+      styleOverrides:{
+        root:{
+          '&.MuiChip-root':{
+            backgroundColor: '#cbe8b3',
+            borderColor: '#406920',
+            color: '#253c12'
           }
         }
       }
