@@ -61,7 +61,7 @@ const sections = [
 const techs = [
   {
     title: 'Frontend',
-    items:['Html, javascript, css', 'React (MUI/material UI, Sematic']
+    items:['Html, javascript, css', 'React (MUI/material UI, Semantic)']
   }, {
     title: 'Full-stack/ Backend',
     items:['Django', 'Node']
