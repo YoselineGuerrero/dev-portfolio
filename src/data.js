@@ -70,4 +70,24 @@ const techs = [
   }
 ];
 
-export { socials, repos, sections, techs };
+const clientWork = [
+  {
+    title: 'Social Website',
+    tech: ['MERN', 'React'],
+    date: 'Aug. 2021 - Dec. 2021',
+    info: ['Client wanted a new site that would help them interact with their members. As well as create an admin view to show records and higher level actions.',
+      'Created CRUD API endpoints and deployed the site.',
+      'Frontend functionally for admin side, creating table views of users/items, reports from data, restricting users from logging in, and making a user admin.',
+      'Arranged communications with the client with weekly meetings. As well as with the group (stand-up meetings), organized the group to make sure everyone has a goal.'],
+  }, {
+    title: 'Web Developer',
+    tech: ['Python', 'Django'],
+    date: 'Jan. 2022 - June 2022',
+    info: ['Client wanted new pages with tables to manipulate data.',
+      'Developed database layout (ER model), setup models in Django admin.',
+      'Unit testing frontend as well as backend with Djangos built in functions.',
+      'Organizing client meetings and main communicator with the client.']
+  }
+];
+
+export { socials, repos, sections, techs, clientWork };

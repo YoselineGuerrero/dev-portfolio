@@ -82,6 +82,7 @@ const lightTheme = createTheme({
     },
     text: {
       primary: '#272838',
+      secondary: '#4f5172'
     },
     background: {
       default: "#FAF9F6",
