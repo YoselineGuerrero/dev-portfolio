@@ -19,7 +19,7 @@ const socials = [
     id: '3',
     icon: EmailIcon,
     title: 'Email',
-    url: '#'
+    url: 'mailto:yoselineguerrero2018@gmail.com?subject=Yoseline%20Guerrero%20Portfolio'
   }
 ];
 
