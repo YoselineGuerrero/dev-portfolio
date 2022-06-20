@@ -9,7 +9,7 @@ import {socials} from '../data';
 export default function Footer() {
   return(
     <div>
-      <AppBar position="static" sx={{ top: 'auto', bottom: 0 }}>
+      <AppBar position="static" sx={{ top: 'auto', bottom: 0, marginTop:'20px'}}>
         <Grid container justifyContent="center">
           {socials.map((socials) => (
             <Grid item key={socials.title}>

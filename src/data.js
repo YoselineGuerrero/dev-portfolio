@@ -45,6 +45,8 @@ const repos = [
   
 const sections = [
   {
+    title: 'About Me'
+  }, {
     title: 'Education'
   }, {
     title: 'Projects'

@@ -18,9 +18,11 @@ import { ColorModeContext } from './App.js';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TechCards from './components/techCards';
+import Education from './components/education';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
+  const aboutMe = useRef(null);
   const education = useRef(null);
   const projects = useRef(null);
   const tech = useRef(null);
@@ -37,6 +39,8 @@ export default function MainPage() {
 
   const executeScroll = (e, title) => {
     e.preventDefault();
+    if(title === 'About Me')
+    aboutMe.current.scrollIntoView({  behavior: 'smooth' })
     if(title === 'Education')
     education.current.scrollIntoView({  behavior: 'smooth' })
     else if(title === 'Projects')
@@ -59,7 +63,7 @@ export default function MainPage() {
             <Menu anchorEl={navMenu} open={Boolean(navMenu)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' } }}>
               {sections.map((section) => (
                 <MenuItem key={section.title} onClick={(e) => executeScroll(e, section.title)}>
-                  <Button>{section.title}</Button>
+                  <Button color='secondary'>{section.title}</Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -78,31 +82,26 @@ export default function MainPage() {
           </Box>
         </Toolbar>
       </AppBar>
-      <div style={{ marginBottom:'20px'}}>
         <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center", paddingTop:'50px'}} > Hello World! </Typography>
         <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center"}}>I'm Yoseline Guererro </Typography>
         <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer</Typography>
         <Grid container justifyContent="center" align="center">
+          <Grid item xs={10} ref={aboutMe} sx={{paddingTop: '70px'}}>
+            <Typography variant="h5" gutterBottom>
+              About Me
+            </Typography>
+            <Typography variant="h6">
+              Born and raised in Texas. I have been interested in CS since high school and have worked on multiple 
+              team projects, competitions, and volunteer work related to CS. When I'm not on my computer, I enjoy 
+              taking time to learn new recipes and cook food from around the world and try new ingredients.
+            </Typography>
+          </Grid>
           <Grid item xs={11} ref={education} sx={{paddingTop: '70px'}}>
             <Typography variant="h5" gutterBottom>
               Education
             </Typography>
           </Grid>
-          <Grid item md={5} xs={11}>
-            <Typography variant="h6">
-              2018-2020<br></br>
-              Lone Star College<br></br>
-              Associates Degree in Computer Science
-            </Typography>
-          </Grid>
-          <Grid item md={5} xs={11}>
-            <Typography variant="h6">
-              2020-2022<br></br>
-              University of Houston<br></br>
-              Bachelor Degree in Computer Science<br></br>
-              Minor in Mathematics 
-            </Typography>
-          </Grid>
+          <Education/>
           <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
             <Typography variant="h5" gutterBottom >
               Released Projects
@@ -121,7 +120,7 @@ export default function MainPage() {
             </Typography>
           </Grid>
           <TechCards/>
-          <Grid item xs={12} ref={contact}>
+          <Grid item xs={10} ref={contact}>
             <Typography variant="h5" gutterBottom align='center' sx={{paddingTop: '70px'}}>
               Let's stay in touch!
             </Typography>
@@ -130,7 +129,6 @@ export default function MainPage() {
             </Typography>
           </Grid>
         </Grid>
-      </div>
       <Footer/>
     </div>
   );

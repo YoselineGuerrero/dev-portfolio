@@ -13,7 +13,7 @@ export default function RepoCards() {
     <>
       {repos.map((repo) => (
         <Grid item md={5} xs={11} key={repo.id} sx={{ margin: '10px', display: "flex", flexDirection: "column", justifyContent: "space-between"}} component={Card}>
-            <CardMedia component="img" image={repo.img} alt="green iguana"/>
+            <CardMedia component="img" image={repo.img} alt="project image"/>
             <CardContent>
               <Typography gutterBottom variant="h6">
                 {repo.name}
