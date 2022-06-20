@@ -86,7 +86,7 @@ const lightTheme = createTheme({
     },
     background: {
       default: "#FAF9F6",
-      paper: '#cde2ef',
+      paper: 'rgb(200,211,222, .6)',
     },
   },
   typography: {
