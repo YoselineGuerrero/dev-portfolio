@@ -14,7 +14,7 @@ export default function Footer() {
           {socials.map((socials) => (
             <Grid item key={socials.title}>
               <Tooltip title={socials.title} >
-                <IconButton  sx={{ "&:hover": { color: socials.color } }} target="_blank" href={socials.url} >
+                <IconButton target="_blank" href={socials.url} >
                   <socials.icon  />
                 </IconButton>
               </Tooltip>

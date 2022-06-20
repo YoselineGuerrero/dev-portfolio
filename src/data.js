@@ -9,19 +9,16 @@ const socials = [
     id: '1',
     icon: GitHubIcon,
     title: 'Github',
-    color: 'black',
     url: 'https://github.com/YoselineGuerrero'
   }, {
     id: '2',
     icon: LinkedInIcon,
     title: 'LinkedIn',
-    color: 'blue',
     url: 'https://www.linkedin.com/in/yoseline-guerrero-a78526175/'
   }, {
     id: '3',
     icon: EmailIcon,
     title: 'Email',
-    color: 'red',
     url: '#'
   }
 ];

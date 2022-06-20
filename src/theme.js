@@ -58,6 +58,16 @@ const darkTheme = createTheme({
           }
         }
       }
+    },
+    MuiIconButton:{
+      styleOverrides:{
+        root:{
+          color:'#E0EDF5',
+          '&:hover': {
+            color: '#121212',
+          },
+        }
+      }
     }
   }
 })
@@ -115,6 +125,15 @@ const lightTheme = createTheme({
             borderColor: '#410058',
             color: '#410058'
           }
+        }
+      }
+    },
+    MuiIconButton:{
+      styleOverrides:{
+        root:{
+          '&:hover': {
+            color: '#FAF9F6',
+          },
         }
       }
     }

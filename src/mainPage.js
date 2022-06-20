@@ -14,7 +14,6 @@ import Footer from './components/footer';
 import RepoCards from './components/repoCards';
 import {sections} from './data';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
 import { ColorModeContext } from './App.js';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -91,14 +90,17 @@ export default function MainPage() {
           </Grid>
           <Grid item md={5} xs={11}>
             <Typography variant="h6">
-              Lone Star College (2018-2020)<br></br>
-              associates degree in computer science
+              2018-2020<br></br>
+              Lone Star College<br></br>
+              Associates Degree in Computer Science
             </Typography>
           </Grid>
           <Grid item md={5} xs={11}>
             <Typography variant="h6">
-              University of Houston (2020-2022)<br></br>
-              bachelor degree in computer science
+              2020-2022<br></br>
+              University of Houston<br></br>
+              Bachelor Degree in Computer Science<br></br>
+              Minor in Mathematics 
             </Typography>
           </Grid>
           <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
@@ -108,17 +110,9 @@ export default function MainPage() {
           </Grid>
           <Grid item xs={11}>
             <Typography variant="h6">
-              Here's all the public project that I have done.
+              Here's some of public project that I have done.
             </Typography>
-            <Typography variant="h6">
-              Devpost will redirect you to see the competitions I have been in.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} >
-            <Box display="flex" justifyContent="space-evenly">
-              <Button target='_blank' color='secondary' variant="outlined" startIcon={<RocketLaunchIcon/>} href="https://devpost.com/YoselineGuerrero">Devpost</Button>
-              <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero">GitHub</Button>
-            </Box>
+            <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero">GitHub</Button>
           </Grid>
           <RepoCards/>
           <Grid item xs={12} ref={tech} sx={{paddingTop: '70px'}}>
