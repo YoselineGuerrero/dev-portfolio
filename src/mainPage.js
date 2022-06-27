@@ -19,6 +19,9 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TechCards from './components/techCards';
 import Education from './components/education';
+import {socials} from './data';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
@@ -82,53 +85,61 @@ export default function MainPage() {
           </Box>
         </Toolbar>
       </AppBar>
-        <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center", paddingTop:'50px'}} > Hello World! </Typography>
-        <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center"}}>I'm Yoseline Guererro </Typography>
-        <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer</Typography>
-        <Grid container justifyContent="center" align="center">
-          <Grid item xs={10} ref={aboutMe} sx={{paddingTop: '70px'}}>
-            <Typography variant="h5" gutterBottom>
-              About Me
-            </Typography>
-            <Typography variant="h6">
-              Born and raised in Texas. I have been interested in CS since high school and have worked on multiple 
-              team projects, competitions, and volunteer work related to CS. When I'm not on my computer, I enjoy 
-              taking time to learn new recipes and cook food from around the world and try new ingredients.
-            </Typography>
-          </Grid>
-          <Grid item xs={11} ref={education} sx={{paddingTop: '70px'}}>
-            <Typography variant="h5" gutterBottom>
-              Education
-            </Typography>
-          </Grid>
-          <Education/>
-          <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
-            <Typography variant="h5" gutterBottom >
-              Released Projects
-            </Typography>
-          </Grid>
-          <Grid item xs={11}>
-            <Typography variant="h6">
-              Here's some of public project that I have done.
-            </Typography>
-            <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero">GitHub</Button>
-          </Grid>
-          <RepoCards/>
-          <Grid item xs={12} ref={tech} sx={{paddingTop: '70px'}}>
-            <Typography variant="h5" gutterBottom>
-              Tech
-            </Typography>
-          </Grid>
-          <TechCards/>
-          <Grid item xs={10} ref={contact}>
-            <Typography variant="h5" gutterBottom align='center' sx={{paddingTop: '70px'}}>
-              Let's stay in touch!
-            </Typography>
-            <Typography  variant="outline" gutterBottom align='center'>
-              Currently working on it so come back soon!
-            </Typography>
-          </Grid>
+      <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center", paddingTop:'50px'}} > Hello World! </Typography>
+      <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center"}}>I'm Yoseline Guererro </Typography>
+      <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer</Typography>
+      <Grid container justifyContent="center" align="center">
+        <Grid item xs={10} ref={aboutMe} sx={{paddingTop: '70px'}}>
+          <Typography variant="h5" gutterBottom>
+            About Me
+          </Typography>
+          <Typography variant="h6">
+            Born and raised in Texas. I have been interested in CS since high school and have worked on multiple 
+            team projects, competitions, and volunteer work related to CS. When I'm not on my computer, I enjoy 
+            taking time to learn new recipes and cook food from around the world and try new ingredients.
+          </Typography>
         </Grid>
+        <Grid item xs={11} ref={education} sx={{paddingTop: '70px'}}>
+          <Typography variant="h5" gutterBottom>
+            Education
+          </Typography>
+        </Grid>
+        <Education/>
+        <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
+          <Typography variant="h5" gutterBottom >
+            Released Projects
+          </Typography>
+        </Grid>
+        <Grid item xs={11}>
+          <Typography variant="h6">
+            Here's some of public project that I have done.
+          </Typography>
+          <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero">GitHub</Button>
+        </Grid>
+        <RepoCards/>
+        <Grid item xs={12} ref={tech} sx={{paddingTop: '70px'}}>
+          <Typography variant="h5" gutterBottom>
+            Tech
+          </Typography>
+        </Grid>
+        <TechCards/>
+        <Grid item xs={10} ref={contact}>
+          <Typography variant="h5" gutterBottom align='center' sx={{paddingTop: '70px'}}>
+            Let's stay in touch!
+          </Typography>
+        </Grid>
+      </Grid>
+      <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} justifyContent="space-evenly">
+        {socials.map((socials) => (
+          <Stack key={socials.url} justifyContent="center" alignContent='center'>
+            <IconButton target="_blank" href={socials.url} sx={{ "&:hover": { backgroundColor: "background.default", color:'primary.main' } }}>
+              <socials.icon  sx={{ fontSize: '2em' }}/>
+            </IconButton>
+            <Typography align='center'>{socials.title}</Typography>
+            <Typography align='center'>{socials.description}</Typography>
+          </Stack>
+        ))}
+      </Stack>
       <Footer/>
     </div>
   );

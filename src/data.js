@@ -9,17 +9,20 @@ const socials = [
     id: '1',
     icon: GitHubIcon,
     title: 'Github',
-    url: 'https://github.com/YoselineGuerrero'
+    url: 'https://github.com/YoselineGuerrero',
+    description: ''
   }, {
     id: '2',
     icon: LinkedInIcon,
     title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/yoseline-guerrero-a78526175/'
+    url: 'https://www.linkedin.com/in/yoseline-guerrero-a78526175/',
+    description: ''
   }, {
     id: '3',
     icon: EmailIcon,
     title: 'Email',
-    url: 'mailto:yoselineguerrero2018@gmail.com?subject=Yoseline%20Guerrero%20Portfolio'
+    url: 'mailto:yguerrerocs@gmail.com?subject=Yoseline%20Guerrero%20Portfolio',
+    description: ''
   }
 ];
 
@@ -72,6 +75,7 @@ const techs = [
 
 const clientWork = [
   {
+    id: '1',
     title: 'Social Website',
     tech: ['MERN', 'React'],
     date: 'Aug. 2021 - Dec. 2021',
@@ -80,6 +84,7 @@ const clientWork = [
       'Frontend functionally for admin side, creating table views of users/items, reports from data, restricting users from logging in, and making a user admin.',
       'Arranged communications with the client with weekly meetings. As well as with the group (stand-up meetings), organized the group to make sure everyone has a goal.'],
   }, {
+    id: '2',
     title: 'Web Developer',
     tech: ['Python', 'Django'],
     date: 'Jan. 2022 - June 2022',

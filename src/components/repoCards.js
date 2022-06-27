@@ -38,17 +38,17 @@ export default function RepoCards() {
         </Grid>
       ))}
       <Grid item xs={10}>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" gutterBottom sx={{paddingTop:'1em'}}>
           Client Work
         </Typography>
-        <Typography variant="body1" gutterBottom>
+        <Typography variant="body1" gutterBottom sx={{paddingBottom:'1em'}}>
           While at the University of Houston I took 2 different conculting clinct classes. While allows us studnets
           to work with people in the community that needed assiatnce for their websites. This could have been 
           updating or creating a new site from scartch. Below below are the projects I work on.
         </Typography>
       </Grid>
       {clientWork.map((work) => (
-        <Grid item xs={11} sx={{marginTop:'10px'}}>
+        <Grid item xs={11} sx={{marginTop:'20px'}} key={work.id}>
           <Card>
             <CardContent>
               <Stack direction="row" justifyContent="space-between" alignItems="center">
@@ -61,7 +61,7 @@ export default function RepoCards() {
                  <Typography>{work.date}</Typography>
               </Stack>
               {work.info.map((points) => (
-                <ListItem>
+                <ListItem key={points}>
                   <Typography variant="body1" color="text.secondary">- {points}</Typography>
                 </ListItem>
               ))}
