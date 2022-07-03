@@ -56,7 +56,7 @@ export default function MainPage() {
 
   return (
     <div>
-      <AppBar position="sticky">
+      <AppBar position="sticky" elevation={0}>
         <Toolbar>
           <img src={YG_logo} alt='YG logo' height='50px'/>
           <Box sx={{flexGrow: 1, justifyContent: 'flex-end', display: { xs: 'flex', md: 'none' }}}>

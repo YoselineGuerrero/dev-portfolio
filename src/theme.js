@@ -6,7 +6,7 @@ const font =  "'Raleway', sans-serif";
 const darkTheme = createTheme({
   palette: {
     primary: {
-      main: '#23334B',
+      main: '#121212',
     },
     secondary: {
       main: '#E0EDF5',
@@ -75,7 +75,7 @@ const darkTheme = createTheme({
 const lightTheme = createTheme({
   palette: {
     primary: {
-      main: '#BFD1E5',
+      main: '#FAF9F6',
     },
     secondary: {
       main: '#272838',
