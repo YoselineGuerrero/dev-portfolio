@@ -3,6 +3,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import githubHomepage from './images/github-example.jpg';
 import MUIHomepage from './images/MUI_template.jpg';
+import studioGhibli from './images/studio-ghibli.png';
 
 const socials = [
   {
@@ -32,9 +33,9 @@ const repos = [
     name: 'MUI Template',
     description: 'A template created using react and MUI. Open for the whole public to copy and have a frontend already created for them to use.',
     code_site: 'https://github.com/YoselineGuerrero/mui_template',
-    live_site: 'https://main.db6zihjdbzz7y.amplifyapp.com/',
+    live_site: 'https://mui-template.netlify.app',
     img: MUIHomepage,
-    tech: ['React','MUI', 'AWS']
+    tech: ['React','MUI', 'Netlify']
   }, {
     id: '2',
     name: 'GitHub API search',
@@ -43,6 +44,14 @@ const repos = [
     live_site: 'https://yoselineguerrero.github.io/react-api-pratice/',
     img: githubHomepage,
     tech: ['React','CSS', 'GitHub Pages']
+  }, {
+    id: '3',
+    name: 'Studio Ghibli Catalog',
+    description: 'Site to find more information on studio ghibli films.',
+    code_site: 'https://github.com/YoselineGuerrero/studio-ghibli',
+    live_site: 'https://studio-ghibli-collections.netlify.app',
+    img: studioGhibli,
+    tech: ['React','CSS', 'Netlify', 'API']
   }
 ];
   
