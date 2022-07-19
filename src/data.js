@@ -16,7 +16,7 @@ const socials = [
     id: '2',
     icon: LinkedInIcon,
     title: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/yoseline-guerrero-a78526175/',
+    url: 'https://www.linkedin.com/in/yoseline-guerrero/',
     description: ''
   }, {
     id: '3',
