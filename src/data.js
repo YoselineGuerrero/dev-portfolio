@@ -41,7 +41,7 @@ const repos = [
     name: 'GitHub API search',
     description: 'Search for any user and get information on who they are and their projects.',
     code_site: 'https://github.com/YoselineGuerrero/react-api-pratice',
-    live_site: 'https://yoselineguerrero.github.io/react-api-pratice/',
+    live_site: 'https://github-userinfo-search.netlify.app',
     img: githubHomepage,
     tech: ['React','CSS', 'GitHub Pages']
   }, {
