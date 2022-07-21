@@ -40,10 +40,10 @@ const repos = [
     id: '2',
     name: 'GitHub API search',
     description: 'Search for any user and get information on who they are and their projects.',
-    code_site: 'https://github.com/YoselineGuerrero/react-api-pratice',
+    code_site: 'https://github.com/YoselineGuerrero/github-user-search',
     live_site: 'https://github-userinfo-search.netlify.app',
     img: githubHomepage,
-    tech: ['React','CSS', 'GitHub Pages']
+    tech: ['React','CSS', 'Netlify', 'API']
   }, {
     id: '3',
     name: 'Studio Ghibli Catalog',
@@ -85,22 +85,33 @@ const techs = [
 const clientWork = [
   {
     id: '1',
-    title: 'Social Website',
-    tech: ['MERN', 'React'],
-    date: 'Aug. 2021 - Dec. 2021',
-    info: ['Client wanted a new site that would help them interact with their members. As well as create an admin view to show records and higher level actions.',
-      'Created CRUD API endpoints and deployed the site.',
-      'Frontend functionally for admin side, creating table views of users/items, reports from data, restricting users from logging in, and making a user admin.',
-      'Arranged communications with the client with weekly meetings. As well as with the group (stand-up meetings), organized the group to make sure everyone has a goal.'],
+    title: 'Django Lead Developer',
+    tech: ['Python', 'Django'],
+    date: 'Jan. 2022 – June 2022',
+    info: ['Expanded client’s site with add on features in Django.',
+      'Implemented non-relational data into MySQL (Relational Database) with EAV.',
+      'Implemented continuous delivery using Jenkins for quality assurance.',
+      'Maintain above 90% on all unit testing both for front/back-end.',
+      'Manage a group of 8 in a full stack environment.',
+      'Head of communications with the client, their main developer, and the professors.'],
   }, {
     id: '2',
-    title: 'Web Developer',
-    tech: ['Python', 'Django'],
-    date: 'Jan. 2022 - June 2022',
-    info: ['Client wanted new pages with tables to manipulate data.',
-      'Developed database layout (ER model), setup models in Django admin.',
-      'Unit testing frontend as well as backend with Djangos built in functions.',
-      'Organizing client meetings and main communicator with the client.']
+    title: 'Social Networking Site Lead Developer',
+    tech: ['MERN', 'MUI'],
+    date: 'Aug. 2021 – Jan. 2022',
+    info: ['Developed a full-stack web application using MERN (MySQL, Express, React, Node) as well as Material-UI.',
+      'Used google Firebase and their API to simplify admin responsibility.',
+      'Led a group of 6 to carry out this assignment.',
+      'Established and maintained positive relationships with the client.']
+  }, {
+    id: '3',
+    title: 'Software Developer',
+    tech: ['HTML', 'CSS', 'PHP'],
+    date: 'Aug. 2021 – Dec. 2021',
+    info: ['Updated site and restored functionally to 100%.',
+      'Utilized HTML, CSS, and PHP to accomplish task since their website builder is discontinued.',
+      'Upgraded CAPTCHA from v1 to v3.',
+      'Integrated Instagram for effortless image gallery.']
   }
 ];
 
