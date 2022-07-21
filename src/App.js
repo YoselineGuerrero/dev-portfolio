@@ -5,6 +5,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import MainPage from './mainPage';
 import React, { useEffect, createContext, useState, useMemo } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
+import ErrorPage from './components/error404';
 
 const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
@@ -14,6 +15,7 @@ function App() {
       <CssBaseline />
         <Routes>
           <Route path="/" element={<MainPage/>}/>
+          <Route path="*" element={<ErrorPage/>}/>
         </Routes>
     </div>
   );
