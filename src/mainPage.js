@@ -20,8 +20,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TechCards from './components/techCards';
 import Education from './components/education';
 import {socials} from './data';
-import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
+import Tooltip from '@mui/material/Tooltip';
 
 export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
@@ -29,7 +28,6 @@ export default function MainPage() {
   const education = useRef(null);
   const projects = useRef(null);
   const tech = useRef(null);
-  const contact = useRef(null);
   const colorMode = useContext(ColorModeContext);
 
   const handleOpenNavMenu = (event) => {
@@ -50,8 +48,6 @@ export default function MainPage() {
     projects.current.scrollIntoView({   behavior: 'smooth' })
     else if(title === 'Tech')
     tech.current.scrollIntoView({ behavior: 'smooth' })
-    else if(title === 'Contact')
-    contact.current.scrollIntoView({ behavior: 'smooth' })
   };
 
   return (
@@ -88,6 +84,15 @@ export default function MainPage() {
       <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center", paddingTop:'50px'}} > Hello World! </Typography>
       <Typography variant="h3" sx={{ flexGrow: 1, textAlign: "center"}}>I'm Yoseline Guererro </Typography>
       <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer</Typography>
+      <Box style={{display: 'flex', justifyContent: 'center'}}>
+        {socials.map((socials) => (
+          <Tooltip title={socials.title}>
+            <IconButton target="_blank" href={socials.url}>
+              <socials.icon/>
+            </IconButton>
+          </Tooltip>
+        ))}
+      </Box>
       <Grid container justifyContent="center" align="center">
         <Grid item xs={10} ref={aboutMe} sx={{paddingTop: '70px'}}>
           <Typography variant="h5" gutterBottom>
@@ -123,23 +128,7 @@ export default function MainPage() {
           </Typography>
         </Grid>
         <TechCards/>
-        <Grid item xs={10} ref={contact}>
-          <Typography variant="h5" gutterBottom align='center' sx={{paddingTop: '70px'}}>
-            Let's stay in touch!
-          </Typography>
-        </Grid>
       </Grid>
-      <Stack direction="row" divider={<Divider orientation="vertical" flexItem />} justifyContent="space-evenly">
-        {socials.map((socials) => (
-          <Stack key={socials.url} justifyContent="center" alignContent='center'>
-            <IconButton target="_blank" href={socials.url}>
-              <socials.icon  sx={{ fontSize: '2em' }}/>
-            </IconButton>
-            <Typography align='center'>{socials.title}</Typography>
-            <Typography align='center'>{socials.description}</Typography>
-          </Stack>
-        ))}
-      </Stack>
       <Footer/>
     </div>
   );

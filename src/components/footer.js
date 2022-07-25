@@ -10,6 +10,9 @@ export default function Footer() {
   return(
     <div>
       <AppBar position="static" sx={{ top: 'auto', bottom: 0, marginTop:'20px'}}>
+      <Typography variant="body2" color="text.secondary" sx={{paddingTop:'10px'}} align="center">
+          Let's stay in touch!
+        </Typography>
         <Grid container justifyContent="center">
           {socials.map((socials) => (
             <Grid item key={socials.title}>

@@ -64,8 +64,6 @@ const sections = [
     title: 'Projects'
   }, {
     title: 'Tech'
-  }, {
-    title: 'Contact'
   }
 ];
 
