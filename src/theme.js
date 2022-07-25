@@ -64,7 +64,7 @@ const darkTheme = createTheme({
         root:{
           color:'#E0EDF5',
           '&:hover': {
-            color: '#121212',
+            background: 'rgb(200,211,222, .2)'
           },
         }
       }
@@ -132,8 +132,9 @@ const lightTheme = createTheme({
     MuiIconButton:{
       styleOverrides:{
         root:{
+          color:'#272838',
           '&:hover': {
-            color: '#FAF9F6',
+            background: 'rgb(200,211,222, .4)'
           },
         }
       }
