@@ -4,6 +4,15 @@ import EmailIcon from '@mui/icons-material/Email';
 import githubHomepage from './images/github-example.jpg';
 import MUIHomepage from './images/MUI_template.jpg';
 import studioGhibli from './images/studio-ghibli.png';
+import Mysql from './tech-icons/Mysql.svg'
+import MongoDB from './tech-icons/MongoDB.svg'
+import Django from './tech-icons/Django.svg'
+import Node from './tech-icons/Node.svg'
+import HTML from './tech-icons/HTML.svg'
+import JavaScript from './tech-icons/JavaScript.svg'
+import CSS from './tech-icons/CSS.svg'
+import React from './tech-icons/React.svg'
+import MUI from './tech-icons/MUI.svg'
 
 const socials = [
   {
@@ -31,27 +40,30 @@ const repos = [
   {
     id: '1',
     name: 'MUI Template',
-    description: 'A template created using react and MUI. Open for the whole public to copy and have a frontend already created for them to use.',
     code_site: 'https://github.com/YoselineGuerrero/mui_template',
     live_site: 'https://mui-template.netlify.app',
     img: MUIHomepage,
-    tech: ['React','MUI', 'Netlify']
+    tech: ['React','MUI', 'Netlify'],
+    info: ['Open for the public to copy and have a frontend already created for them to use.',
+      'Implemented pages for different scenarios (404 error, comming soon, contact page with form, blog page view)',],
   }, {
     id: '2',
-    name: 'GitHub API search',
-    description: 'Search for any user and get information on who they are and their projects.',
+    name: 'GitHub API Search',
     code_site: 'https://github.com/YoselineGuerrero/github-user-search',
     live_site: 'https://github-userinfo-search.netlify.app',
     img: githubHomepage,
-    tech: ['React','CSS', 'Netlify', 'API']
+    tech: ['React','CSS', 'Netlify', 'API'],
+    info: ['Search for any user and get information on who they are and their projects, using GitHub\'s API.',
+      'CSS used to created different color schemes modes, responsive web design, and similiar styling to the actual site.',],
   }, {
     id: '3',
     name: 'Studio Ghibli Catalog',
-    description: 'Site to find more information on studio ghibli films.',
     code_site: 'https://github.com/YoselineGuerrero/studio-ghibli',
     live_site: 'https://studio-ghibli-collections.netlify.app',
     img: studioGhibli,
-    tech: ['React','CSS', 'Netlify', 'API']
+    tech: ['React','CSS', 'Netlify', 'API'],
+    info: ['Site to find more information on studio ghibli films.',
+      'Gathers Studio Ghibli films information from the public API and displays it in multiples sections.',],
   }
 ];
   
@@ -64,28 +76,68 @@ const sections = [
     title: 'Projects'
   }, {
     title: 'Tech'
-  }, {
-    title: 'Contact'
   }
 ];
 
 const techs = [
   {
     title: 'Frontend',
-    items:['Html, JavaScript, CSS', 'React (MUI, Semantic)']
+    icons: [
+      {
+        id: '1',
+        img: HTML,
+        img_title: 'HTML'
+      }, {
+        id: '2',
+        img: JavaScript,
+        img_title: 'JavaScript'
+      }, {
+        id: '3',
+        img: CSS,
+        img_title: 'CSS'
+      }, {
+        id: '4',
+        img: React,
+        img_title: 'React'
+      }, {
+        id: '5',
+        img: MUI,
+        img_title: 'MUI'
+      }
+    ]
   }, {
     title: 'Full-stack/ Backend',
-    items:['Django', 'Node']
+    icons: [
+      {
+        id: '1',
+        img: Django,
+        img_title: 'Django'
+      }, {
+        id: '2',
+        img: Node,
+        img_title: 'Node'
+      }
+    ]
   }, {
     title: 'Database',
-    items:['Mysql', 'MongoDB']
+    icons: [
+      {
+        id: '1',
+        img: Mysql,
+        img_title: 'Mysql'
+      }, {
+        id: '2',
+        img: MongoDB,
+        img_title: 'MongoDB'
+      }
+    ]
   }
 ];
 
 const clientWork = [
   {
     id: '1',
-    title: 'Django Lead Developer',
+    title: 'Django Developer',
     tech: ['Python', 'Django'],
     date: 'Jan. 2022 – June 2022',
     info: ['Expanded client’s site with add on features in Django.',
@@ -96,7 +148,7 @@ const clientWork = [
       'Head of communications with the client, their main developer, and the professors.'],
   }, {
     id: '2',
-    title: 'Social Networking Site Lead Developer',
+    title: 'Social Networking Developer',
     tech: ['MERN', 'MUI'],
     date: 'Aug. 2021 – Jan. 2022',
     info: ['Developed a full-stack web application using MERN (MySQL, Express, React, Node) as well as Material-UI.',
