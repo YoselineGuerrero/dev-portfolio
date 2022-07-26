@@ -2,6 +2,8 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import {techs} from '../data';
+import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
 
 export default function TechCards() {
   return(
@@ -11,10 +13,12 @@ export default function TechCards() {
           <Typography variant="h6" display="block" gutterBottom>
             <b>{tech.title}</b>
           </Typography>
-          {tech.items.map((item) =>(
-            <Typography gutterBottom key={item}> 
-              {item}
-            </Typography>
+          {tech.icons.map((icon) =>(
+            <Box sx={{margin:'10px', display:'inline-flex'}} key={icon.id}>
+              <Tooltip title={icon.img_title}>
+                <img src={icon.img} alt={icon.img_title}/>
+              </Tooltip>
+            </Box>
           ))}
         </Grid>
       ))}

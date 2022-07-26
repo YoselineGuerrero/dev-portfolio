@@ -4,6 +4,15 @@ import EmailIcon from '@mui/icons-material/Email';
 import githubHomepage from './images/github-example.jpg';
 import MUIHomepage from './images/MUI_template.jpg';
 import studioGhibli from './images/studio-ghibli.png';
+import Mysql from './tech-icons/Mysql.svg'
+import MongoDB from './tech-icons/MongoDB.svg'
+import Django from './tech-icons/Django.svg'
+import Node from './tech-icons/Node.svg'
+import HTML from './tech-icons/HTML.svg'
+import JavaScript from './tech-icons/JavaScript.svg'
+import CSS from './tech-icons/CSS.svg'
+import React from './tech-icons/React.svg'
+import MUI from './tech-icons/MUI.svg'
 
 const socials = [
   {
@@ -70,13 +79,55 @@ const sections = [
 const techs = [
   {
     title: 'Frontend',
-    items:['Html, JavaScript, CSS', 'React (MUI, Semantic)']
+    icons: [
+      {
+        id: '1',
+        img: HTML,
+        img_title: 'HTML'
+      }, {
+        id: '2',
+        img: JavaScript,
+        img_title: 'JavaScript'
+      }, {
+        id: '3',
+        img: CSS,
+        img_title: 'CSS'
+      }, {
+        id: '4',
+        img: React,
+        img_title: 'React'
+      }, {
+        id: '5',
+        img: MUI,
+        img_title: 'MUI'
+      }
+    ]
   }, {
     title: 'Full-stack/ Backend',
-    items:['Django', 'Node']
+    icons: [
+      {
+        id: '1',
+        img: Django,
+        img_title: 'Django'
+      }, {
+        id: '2',
+        img: Node,
+        img_title: 'Node'
+      }
+    ]
   }, {
     title: 'Database',
-    items:['Mysql', 'MongoDB']
+    icons: [
+      {
+        id: '1',
+        img: Mysql,
+        img_title: 'Mysql'
+      }, {
+        id: '2',
+        img: MongoDB,
+        img_title: 'MongoDB'
+      }
+    ]
   }
 ];
 
