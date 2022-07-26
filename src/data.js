@@ -40,27 +40,30 @@ const repos = [
   {
     id: '1',
     name: 'MUI Template',
-    description: 'A template created using react and MUI. Open for the whole public to copy and have a frontend already created for them to use.',
     code_site: 'https://github.com/YoselineGuerrero/mui_template',
     live_site: 'https://mui-template.netlify.app',
     img: MUIHomepage,
-    tech: ['React','MUI', 'Netlify']
+    tech: ['React','MUI', 'Netlify'],
+    info: ['Open for the public to copy and have a frontend already created for them to use.',
+      'Implemented pages for different scenarios (404 error, comming soon, contact page with form, blog page view)',],
   }, {
     id: '2',
-    name: 'GitHub API search',
-    description: 'Search for any user and get information on who they are and their projects.',
+    name: 'GitHub API Search',
     code_site: 'https://github.com/YoselineGuerrero/github-user-search',
     live_site: 'https://github-userinfo-search.netlify.app',
     img: githubHomepage,
-    tech: ['React','CSS', 'Netlify', 'API']
+    tech: ['React','CSS', 'Netlify', 'API'],
+    info: ['Search for any user and get information on who they are and their projects, using GitHub\'s API.',
+      'CSS used to created different color schemes modes, responsive web design, and similiar styling to the actual site.',],
   }, {
     id: '3',
     name: 'Studio Ghibli Catalog',
-    description: 'Site to find more information on studio ghibli films.',
     code_site: 'https://github.com/YoselineGuerrero/studio-ghibli',
     live_site: 'https://studio-ghibli-collections.netlify.app',
     img: studioGhibli,
-    tech: ['React','CSS', 'Netlify', 'API']
+    tech: ['React','CSS', 'Netlify', 'API'],
+    info: ['Site to find more information on studio ghibli films.',
+      'Gathers Studio Ghibli films information from the public API and displays it in multiples sections.',],
   }
 ];
   
@@ -134,7 +137,7 @@ const techs = [
 const clientWork = [
   {
     id: '1',
-    title: 'Django Lead Developer',
+    title: 'Django Developer',
     tech: ['Python', 'Django'],
     date: 'Jan. 2022 – June 2022',
     info: ['Expanded client’s site with add on features in Django.',
@@ -145,7 +148,7 @@ const clientWork = [
       'Head of communications with the client, their main developer, and the professors.'],
   }, {
     id: '2',
-    title: 'Social Networking Site Lead Developer',
+    title: 'Social Networking Developer',
     tech: ['MERN', 'MUI'],
     date: 'Aug. 2021 – Jan. 2022',
     info: ['Developed a full-stack web application using MERN (MySQL, Express, React, Node) as well as Material-UI.',

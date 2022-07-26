@@ -20,9 +20,11 @@ export default function RepoCards() {
             <Typography gutterBottom variant="h6">
               {repo.name}
             </Typography>
-            <Typography variant="body1" color="text.secondary">
-              {repo.description}
-            </Typography>
+            {repo.info.map((points) => (
+              <ListItem key={points}>
+                <Typography variant="body1" color="text.secondary">- {points}</Typography>
+              </ListItem>
+            ))}
             {repo.tech.map((item) => (
               <Chip key={item} label={item} color="secondary" size="small" variant="outlined" sx={{margin:'3px'}}/>
             ))}
@@ -48,25 +50,23 @@ export default function RepoCards() {
         </Typography>
       </Grid>
       {clientWork.map((work) => (
-        <Grid item xs={11} sx={{marginTop:'20px'}} key={work.id}>
-          <Card>
-            <CardContent>
-              <Stack direction="row" justifyContent="space-between" alignItems="center">
-                <Typography>{work.title}</Typography>
-                <Stack direction="row">
-                  {work.tech.map((item) => (
-                    <Chip key={item} label={item} color="secondary" size="small" variant="outlined" sx={{margin:'3px'}}/>
-                  ))}
-                </Stack>
-                 <Typography>{work.date}</Typography>
-              </Stack>
-              {work.info.map((points) => (
-                <ListItem key={points}>
-                  <Typography variant="body1" color="text.secondary">- {points}</Typography>
-                </ListItem>
+        <Grid component={Card} item xs={11} md={5} sx={{ margin: '10px', display: "flex", flexDirection: "column", justifyContent: "space-between"}} key={work.id}>
+          <CardContent>
+            <Stack direction="row" justifyContent="space-between" alignItems="center">
+              <Typography>{work.title}</Typography>
+              <Typography>{work.date}</Typography>
+            </Stack>
+            <Stack direction="row" justifyContent="center">
+              {work.tech.map((item) => (
+                <Chip key={item} label={item} color="secondary" size="small" variant="outlined" sx={{margin:'3px'}}/>
               ))}
-            </CardContent>
-          </Card>
+            </Stack>
+            {work.info.map((points) => (
+              <ListItem key={points}>
+                <Typography variant="body1" color="text.secondary">- {points}</Typography>
+              </ListItem>
+            ))}
+          </CardContent>
         </Grid>
       ))}
     </>

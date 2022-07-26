@@ -86,7 +86,7 @@ export default function MainPage() {
       <Typography variant="subtitle1" sx={{ flexGrow: 1, textAlign: "center"}}>Software Developer</Typography>
       <Box style={{display: 'flex', justifyContent: 'center'}}>
         {socials.map((socials) => (
-          <Tooltip title={socials.title}>
+          <Tooltip title={socials.title} key={socials.id}>
             <IconButton target="_blank" href={socials.url}>
               <socials.icon/>
             </IconButton>
