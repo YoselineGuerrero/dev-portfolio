@@ -13,11 +13,12 @@ const darkTheme = createTheme({
     },
     text: {
       primary: '#FFF',
-      secondary: '#BFD1E5'
+      secondary: '#35354d',
+      tertiary: '#33333b',
     },
     background: {
       default: "#121212",
-      paper: '#37474f',
+      paper: '#899096',
     },
   },
   typography: {
@@ -42,19 +43,13 @@ const darkTheme = createTheme({
         },
       }
     },
-    MuiButton:{
-      styleOverrides:{
-        root:{
-        }
-      }
-    },
     MuiChip:{
       styleOverrides:{
         root:{
           '&.MuiChip-root':{
-            backgroundColor: '#eadeee',
-            borderColor: '#410058',
-            color: '#410058'
+            backgroundColor: '#f0dcd4',
+            borderColor: '#E1746E',
+            color: '#A4413C'
           }
         }
       }
@@ -82,11 +77,12 @@ const lightTheme = createTheme({
     },
     text: {
       primary: '#272838',
-      secondary: '#4f5172'
+      secondary: '#b3b3c4',
+      tertiary: '#e6e7fa',
     },
     background: {
       default: "#FAF9F6",
-      paper: 'rgb(200,211,222, .6)',
+      paper: '#313d47',
     },
   },
   typography: {
@@ -105,26 +101,13 @@ const lightTheme = createTheme({
         },
       }
     },
-    MuiButton:{
-      styleOverrides:{
-        root:{
-          '&.MuiButton-outlined': {
-            '&:hover': {
-              color: '#1a3c56',
-              backgroundColor: '#d0d9ec',
-              borderColor: '#235174'
-            },
-          }
-        }
-      }
-    },
     MuiChip:{
       styleOverrides:{
         root:{
           '&.MuiChip-root':{
-            backgroundColor: '#eadeee',
-            borderColor: '#410058',
-            color: '#410058'
+            backgroundColor: '#f2ebe9',
+            borderColor: '#E1746E',
+            color: '#A4413C'
           }
         }
       }
