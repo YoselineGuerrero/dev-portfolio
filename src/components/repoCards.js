@@ -17,7 +17,7 @@ export default function RepoCards() {
         <Grid item md={5} xs={11} key={repo.id} sx={{ margin: '10px', display: "flex", flexDirection: "column", justifyContent: "space-between"}} component={Card}>
           <CardMedia component="img" image={repo.img} alt="project image"/>
           <CardContent>
-            <Typography gutterBottom variant="h6">
+            <Typography gutterBottom variant="h6" color='text.tertiary'>
               {repo.name}
             </Typography>
             {repo.info.map((points) => (
@@ -30,10 +30,10 @@ export default function RepoCards() {
             ))}
           </CardContent>
           <CardActions>
-            <Button size="small" color="secondary" variant="outlined" href={repo.code_site} target="_blank">
+            <Button size="small" variant="outlined" href={repo.code_site} target="_blank">
               Code
             </Button>
-            <Button size="small" color="secondary" variant="outlined" href={repo.live_site} target="_blank">
+            <Button size="small" variant="outlined" href={repo.live_site} target="_blank">
               Live Site
             </Button>
           </CardActions>
@@ -53,8 +53,8 @@ export default function RepoCards() {
         <Grid component={Card} item xs={11} md={5} sx={{ margin: '10px', display: "flex", flexDirection: "column", justifyContent: "space-between"}} key={work.id}>
           <CardContent>
             <Stack direction="row" justifyContent="space-between" alignItems="center">
-              <Typography>{work.title}</Typography>
-              <Typography>{work.date}</Typography>
+              <Typography color='text.tertiary'>{work.title}</Typography>
+              <Typography color='text.tertiary'>{work.date}</Typography>
             </Stack>
             <Stack direction="row" justifyContent="center">
               {work.tech.map((item) => (

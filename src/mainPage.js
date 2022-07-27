@@ -62,7 +62,7 @@ export default function MainPage() {
             <Menu anchorEl={navMenu} open={Boolean(navMenu)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' } }}>
               {sections.map((section) => (
                 <MenuItem key={section.title} onClick={(e) => executeScroll(e, section.title)}>
-                  <Button color='secondary'>{section.title}</Button>
+                  <Button color='primary'>{section.title}</Button>
                 </MenuItem>
               ))}
             </Menu>

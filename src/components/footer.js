@@ -10,7 +10,7 @@ export default function Footer() {
   return(
     <div>
       <AppBar position="static" sx={{ top: 'auto', bottom: 0, marginTop:'20px'}}>
-      <Typography variant="body2" color="text.secondary" sx={{paddingTop:'10px'}} align="center">
+      <Typography variant="body2" color="text.primary" sx={{paddingTop:'10px'}} align="center">
           Let's stay in touch!
         </Typography>
         <Grid container justifyContent="center">
@@ -24,7 +24,7 @@ export default function Footer() {
             </Grid>
           ))}
         </Grid>
-        <Typography variant="body2" color="text.secondary" sx={{paddingBottom:'10px'}} align="center">
+        <Typography variant="body2" color="text.primary" sx={{paddingBottom:'10px'}} align="center">
           Copyright © Yoseline Guerrero 2022
         </Typography>
       </AppBar>
