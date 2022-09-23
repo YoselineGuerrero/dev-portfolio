@@ -13,12 +13,11 @@ const darkTheme = createTheme({
     },
     text: {
       primary: '#FFF',
-      secondary: '#35354d',
-      tertiary: '#33333b',
+      secondary: 'rgba(255, 255, 255)',
     },
     background: {
       default: "#121212",
-      paper: '#899096',
+      paper: 'rgba(48, 48, 48)',
     },
   },
   typography: {
@@ -37,9 +36,6 @@ const darkTheme = createTheme({
           '& .MuiOutlinedInput-root': {
             backgroundColor: "#01080E",
           },
-          "& .MuiFormHelperText-root" :{
-            color: '#747474 !important',
-          },
         },
       }
     },
@@ -47,9 +43,9 @@ const darkTheme = createTheme({
       styleOverrides:{
         root:{
           '&.MuiChip-root':{
-            backgroundColor: '#f0dcd4',
-            borderColor: '#E1746E',
-            color: '#A4413C'
+            backgroundColor: 'rgba(238, 241, 248, .85)',
+            borderColor: 'rgb(37, 37, 81)',
+            color: 'rgb(37, 37, 81)'
           }
         }
       }
@@ -57,10 +53,18 @@ const darkTheme = createTheme({
     MuiIconButton:{
       styleOverrides:{
         root:{
-          color:'#E0EDF5',
+          color:'#FFF',
           '&:hover': {
-            background: 'rgb(200,211,222, .2)'
+            background: 'rgba(238, 241, 248, .25)',
+            color:'rgba(238, 241, 248, .75)',
           },
+        }
+      }
+    },
+    MuiDivider:{
+      styleOverrides:{
+        root:{
+          background:'#FFF',
         }
       }
     }
@@ -73,16 +77,15 @@ const lightTheme = createTheme({
       main: '#FAF9F6',
     },
     secondary: {
-      main: '#272838',
+      main: '#454648',
     },
     text: {
-      primary: '#272838',
-      secondary: '#b3b3c4',
-      tertiary: '#e6e7fa',
+      primary: 'rgb(41, 41, 41 )',
+      secondary: 'rgb(66, 66, 66)',
     },
     background: {
       default: "#FAF9F6",
-      paper: '#313d47',
+      paper: 'rgb(234, 234, 234)',
     },
   },
   typography: {
@@ -105,9 +108,9 @@ const lightTheme = createTheme({
       styleOverrides:{
         root:{
           '&.MuiChip-root':{
-            backgroundColor: '#f2ebe9',
-            borderColor: '#E1746E',
-            color: '#A4413C'
+            backgroundColor: 'rgba(238, 241, 248, .85)',
+            borderColor: 'rgb(37, 37, 81)',
+            color: 'rgb(37, 37, 81)'
           }
         }
       }
@@ -117,8 +120,16 @@ const lightTheme = createTheme({
         root:{
           color:'#272838',
           '&:hover': {
-            background: 'rgb(200,211,222, .4)'
+            background: 'rgb(200,211,222, .4)',
+            color: 'rgb(39, 40, 56, .75)'
           },
+        }
+      }
+    },
+    MuiDivider:{
+      styleOverrides:{
+        root:{
+          background:'rgb(41, 41, 41)',
         }
       }
     }

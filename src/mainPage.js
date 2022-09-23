@@ -13,7 +13,6 @@ import AppBar from '@mui/material/AppBar';
 import Footer from './components/footer';
 import RepoCards from './components/repoCards';
 import {sections} from './data';
-import GitHubIcon from '@mui/icons-material/GitHub';
 import { ColorModeContext } from './App.js';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
@@ -62,7 +61,7 @@ export default function MainPage() {
             <Menu anchorEl={navMenu} open={Boolean(navMenu)} onClose={handleCloseNavMenu} sx={{ display: { xs: 'block', md: 'none' } }}>
               {sections.map((section) => (
                 <MenuItem key={section.title} onClick={(e) => executeScroll(e, section.title)}>
-                  <Button color='primary'>{section.title}</Button>
+                  <Button color='secondary'>{section.title}</Button>
                 </MenuItem>
               ))}
             </Menu>
@@ -98,7 +97,7 @@ export default function MainPage() {
           <Typography variant="h5" gutterBottom>
             About Me
           </Typography>
-          <Typography variant="h6">
+          <Typography variant="subtitle1">
             Born and raised in Texas. I have been interested in CS since high school and have worked on multiple 
             team projects, competitions, and volunteer work related to CS. When I'm not on my computer, I enjoy 
             taking time to learn new recipes and cook food from around the world and try new ingredients.
@@ -112,14 +111,8 @@ export default function MainPage() {
         <Education/>
         <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
           <Typography variant="h5" gutterBottom >
-            Released Projects
+            Experience
           </Typography>
-        </Grid>
-        <Grid item xs={11}>
-          <Typography variant="h6">
-            Here's some of public project that I have done.
-          </Typography>
-          <Button target='_blank' color='secondary' variant="outlined" startIcon={<GitHubIcon/>} href="https://github.com/YoselineGuerrero">GitHub</Button>
         </Grid>
         <RepoCards/>
         <Grid item xs={12} ref={tech} sx={{paddingTop: '70px'}}>
