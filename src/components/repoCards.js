@@ -14,7 +14,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function RepoCards() {
   return(
     <>
-      <Grid item xs={8}>
+      <Grid item xs={11} md={8}>
         <Typography variant="h6">Current Job</Typography>
         <Card>
           <CardContent>

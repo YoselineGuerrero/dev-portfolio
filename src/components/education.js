@@ -15,7 +15,10 @@ export default function Education() {
         <Typography variant="h6">Associates Degree in Computer Science</Typography>
         <Typography variant='body1'>Magna Cum Laude</Typography>
       </Grid>
-      <Divider orientation="vertical" flexItem></Divider>
+      <Divider orientation="vertical" flexItem  sx={{display: { xs: 'none', md: 'flex' }}}></Divider>
+      <Grid item xs={6} sx={{margin:'15px', display: { xs: 'block', md: 'none' }}}>
+        <Divider  component="li" sx={{display: 'block'}} />
+      </Grid>
       <Grid item md={5.5} xs={10} sx={{padding:'15px'}}>
         <Stack direction="row" justifyContent="space-around" alignItems="center">
           <Typography variant="body1">University of Houston</Typography>
