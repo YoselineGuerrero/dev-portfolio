@@ -25,7 +25,7 @@ export default function MainPage() {
   const [navMenu, setnavMenu] = useState(null);
   const aboutMe = useRef(null);
   const education = useRef(null);
-  const projects = useRef(null);
+  const experience = useRef(null);
   const tech = useRef(null);
   const colorMode = useContext(ColorModeContext);
 
@@ -43,8 +43,8 @@ export default function MainPage() {
     aboutMe.current.scrollIntoView({  behavior: 'smooth' })
     if(title === 'Education')
     education.current.scrollIntoView({  behavior: 'smooth' })
-    else if(title === 'Projects')
-    projects.current.scrollIntoView({   behavior: 'smooth' })
+    else if(title === 'Experience')
+    experience.current.scrollIntoView({   behavior: 'smooth' })
     else if(title === 'Tech')
     tech.current.scrollIntoView({ behavior: 'smooth' })
   };
@@ -109,7 +109,7 @@ export default function MainPage() {
           </Typography>
         </Grid>
         <Education/>
-        <Grid item xs={11} ref={projects} sx={{paddingTop: '70px'}}>
+        <Grid item xs={11} ref={experience} sx={{paddingTop: '70px'}}>
           <Typography variant="h5" gutterBottom >
             Experience
           </Typography>
