@@ -13,7 +13,8 @@ export default function Education() {
           <Typography variant="body1">2018-2020</Typography>
         </Stack>
         <Typography variant="h6">Associates Degree in Computer Science</Typography>
-        <Typography variant='body1'>Magna Cum Laude</Typography>
+        <Typography variant='body1'>Magna Cum Laude, GPA: 3.77</Typography>
+        <Typography variant='body1'>Dean's List</Typography>
       </Grid>
       <Divider orientation="vertical" flexItem  sx={{display: { xs: 'none', md: 'flex' }}}></Divider>
       <Grid item xs={6} sx={{margin:'15px', display: { xs: 'block', md: 'none' }}}>
@@ -27,6 +28,7 @@ export default function Education() {
         <Typography variant="h6">Bachelor Degree in Computer Science</Typography>
         <Typography variant="body1">Minor in Mathematics</Typography>
         <Typography variant='body1'>Magna Cum Laude, GPA: 3.85</Typography>
+        <Typography variant='body1'>Dean's List Fall 2021</Typography>
       </Grid>
     </>      
   )

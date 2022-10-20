@@ -41,8 +41,8 @@ const socials = [
 
 const repos = [
   {
-    id: '1',
-    name: 'MUI Template',
+    id: '0',
+    title: 'MUI Template',
     code_site: 'https://github.com/YoselineGuerrero/mui_template',
     live_site: 'https://mui-template.netlify.app',
     img: MUIHomepage,
@@ -51,8 +51,8 @@ const repos = [
     info: ['Open for the public to copy and have a frontend already created for them to use.',
       'Implemented pages for different scenarios (404 error, comming soon, contact page with form, blog page view)',],
   }, {
-    id: '2',
-    name: 'GitHub API Search',
+    id: '1',
+    title: 'GitHub API Search',
     code_site: 'https://github.com/YoselineGuerrero/github-user-search',
     live_site: 'https://github-userinfo-search.netlify.app',
     img: githubHomepage,
@@ -61,8 +61,8 @@ const repos = [
     info: ['Search for any user and get information on who they are and their projects, using GitHub\'s API.',
       'CSS used to created different color schemes modes, responsive web design, and similiar styling to the actual site.',],
   }, {
-    id: '3',
-    name: 'Studio Ghibli Catalog',
+    id: '2',
+    title: 'Studio Ghibli Catalog',
     code_site: 'https://github.com/YoselineGuerrero/studio-ghibli',
     live_site: 'https://studio-ghibli-collections.netlify.app',
     img: studioGhibli,
@@ -79,7 +79,7 @@ const sections = [
   }, {
     title: 'Education'
   }, {
-    title: 'Projects'
+    title: 'Experience'
   }, {
     title: 'Tech'
   }
@@ -142,8 +142,9 @@ const techs = [
 
 const clientWork = [
   {
-    id: '1',
+    id: '0',
     title: 'Django Developer',
+    location: 'Houston, TX',
     tech: ['Python', 'Django'],
     date: 'Jan. 2022 – June 2022',
     info: ['Expanded client’s site with add on features in Django.',
@@ -153,8 +154,9 @@ const clientWork = [
       'Manage a group of 8 in a full stack environment.',
       'Head of communications with the client, their main developer, and the professors.'],
   }, {
-    id: '2',
+    id: '1',
     title: 'Social Networking Developer',
+    location: 'Houston, TX',
     tech: ['MERN', 'MUI'],
     date: 'Aug. 2021 – Jan. 2022',
     info: ['Developed a full-stack web application using MERN (MySQL, Express, React, Node) as well as Material-UI.',
@@ -162,8 +164,9 @@ const clientWork = [
       'Led a group of 6 to carry out this assignment.',
       'Established and maintained positive relationships with the client.']
   }, {
-    id: '3',
+    id: '2',
     title: 'Software Developer',
+    location: 'Houston, TX',
     tech: ['HTML', 'CSS', 'PHP'],
     date: 'Aug. 2021 – Dec. 2021',
     info: ['Updated site and restored functionally to 100%.',
@@ -175,24 +178,27 @@ const clientWork = [
 
 const otherExp =[
   {
-    id: '1',
+    id: '0',
     title: 'Research Assistant ',
+    location: 'Houston, TX',
     tech: ['Keils', 'Linux'],
     date: 'Aug 2020 - Jan 2021',
     info: ['Developed many different quizzes and exams.',
       'Helped over 100+ students.',
       'Managed the process of adding all quizzes and exams to the system.']
   }, {
-    id: '2',
+    id: '1',
     title: 'I-TECH Mentor',
+    location: 'Houston, TX',
     tech: ['Python', '3D modeling'],
     date: 'Jul 2021 - Aug 2021',
     info: ['Guided groups of 6 in different CS topics',
       'Worked with elementary, middle, and high school students groups.',
       'Led more challenging project in class.']
   }, {
-    id: '3',
+    id: '2',
     title: 'HackMISSO 1st place',
+    location: 'Houston, TX',
     tech: ['React'],
     date: 'Nov 2021',
     info: ['Group won 1st place at hackathon.',
@@ -207,6 +213,7 @@ const otherExp =[
 const currentJob ={
   id: '1',
   title: 'API Automation Developer Intern',
+  location: 'Houston, TX',
   time: 'Aug. 2022 – Present',
   companyName: 'P97 Networks, Inc.',
   points: ['Helped create/run different type of tests (smoke/sanity) reaching over 80% success rates',
