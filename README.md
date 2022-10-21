@@ -1,6 +1,13 @@
-# :desktop_computer: My CS Portfolio
+# :desktop_computer: CS Portfolio
 
-This is where I track all of the achivements that I have done related to CS.
+This is where I track all of the achivements that I have done related to CS. I also use this site as a way to test new material that I have learned over the last 2 years. If you play around with this site enought you might be able to see a lot of hidden features. I try to make each project as polish as possible by making sure that everything is covered. 
+
+Features covered in this site:
+
+- Dark/Light mode
+- Error page
+- Responsive design, compatiable with small to extra large devices
+- Proper meta tags to make site more satisfying when sharing
 
 The site is only frontend and was created using: React.js and MUI (Material-UI)
 <div>
