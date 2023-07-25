@@ -54,7 +54,7 @@ export default function RepoCards() {
         <Card>
           <CardContent>
             <Stack direction="row" justifyContent="space-between" sx={{flexFlow: 'wrap'}}>
-              <Typography>{currentJob.title}</Typography>
+              <Typography variant="h6">{currentJob.title}</Typography>
               <Typography>{currentJob.time}</Typography>
             </Stack>
             <Typography sx={{display: 'flex', fontStyle: 'italic'}}>{currentJob.companyName} - {currentJob.location}</Typography>

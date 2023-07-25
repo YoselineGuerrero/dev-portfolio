@@ -212,14 +212,14 @@ const otherExp =[
 
 const currentJob ={
   id: '1',
-  title: 'API Automation Developer Intern',
+  title: 'Automation Developer',
   location: 'Houston, TX',
   time: 'Aug. 2022 – Present',
   companyName: 'P97 Networks, Inc.',
-  points: ['Helped create/run different type of tests (smoke/sanity) reaching over 80% success rates',
-    'Working with pipelines to improve scores',
-    'Helped run manual testing, finding over 10+ bugs',
-    'Improved depreciated documentation']
+  points: ['Created/ran different type of tests (smoke/sanity/regression) reaching over 80% success rates',
+    'Helped oversee integration of new UI project, leading 3+ developers and 5+ testers',
+    'Automated +150 test cases and wrote +50 test cases for: in-house, 3rd party apps, and portal (website)',
+    'API Automation Developer Intern (Aug. 2022 -- Nov. 2023)']
 }
 
 export { socials, repos, sections, techs, clientWork, otherExp, currentJob };
