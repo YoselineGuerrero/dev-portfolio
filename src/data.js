@@ -219,7 +219,7 @@ const currentJob ={
   points: ['Created/ran different type of tests (smoke/sanity/regression) reaching over 80% success rates',
     'Helped oversee integration of new UI project, leading 3+ developers and 5+ testers',
     'Automated +150 test cases and wrote +50 test cases for: in-house, 3rd party apps, and portal (website)',
-    'API Automation Developer Intern (Aug. 2022 -- Nov. 2023)']
+    'API Automation Developer Intern (Aug. 2022 -- Nov. 2022)']
 }
 
 export { socials, repos, sections, techs, clientWork, otherExp, currentJob };

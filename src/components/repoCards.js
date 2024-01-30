@@ -122,7 +122,7 @@ export default function RepoCards() {
           Client Work
         </Typography>
         <Typography variant="body1" gutterBottom sx={{paddingBottom:'1em'}}>
-          While at the University of Houston I took 2 different conculting clinct classes. While allows us studnets
+          While at the University of Houston I took 2 different consulting clinic classes. While allows us studnets
           to work with people in the community that needed assiatnce for their websites. This could have been 
           updating or creating a new site from scartch. Below below are the projects I work on.
         </Typography>
