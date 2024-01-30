@@ -25,7 +25,7 @@ export default function Footer() {
           ))}
         </Grid>
         <Typography variant="body2" color="text.primary" sx={{paddingBottom:'10px'}} align="center">
-          Copyright © Yoseline Guerrero 2022
+          Copyright © Yoseline Guerrero 2024
         </Typography>
       </AppBar>
     </div>      
